@@ -3,6 +3,10 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<title>Pyvarium</title>
+		<style>
+			.row {display:flex; flex-wrap:wrap;}
+			.col {flex:1;}
+		</style>
 	</head>
 	<body style="padding:10px;">
 		<div style="margin-bottom:20px;">
@@ -12,59 +16,67 @@
 		<div style="padding:20px; margin-bottom:20px; background-color:#EEE; border-radius:5px;">
 			<a href="/">Home</a> / Pyvarium
 		</div>
-		<div style="padding:10px; border:3px solid #eee; border-radius:5px;">
-			<img src="./files/welcome_small.png" />
-		</div>
-		<p>
-			Pyvarium is a Python script runner GUI tool.<br />
-			It designed to be easy and quickly load and execute scripts just like using command line.<br />
-			It feature result that can be represented as textual or graphical using the PySide2 widgets to provide convenience and interactivity.<br />
-			It was created as a testing and analitics tool in mind, but come up as a multipurpose tool.
-		</p>
-		<p>
-			This application is distributed in source code form.<br />
-			To run it, you need at least <a href="https://www.python.org/downloads/" title="Python download page">Python3</a> 
-			and <a href="https://doc.qt.io/qtforpython/quickstart.html" title="PySide2 quickstart page">PySide2</a> environment already set up in your computer.
-		</p>
-		<p>
-			The documentations are included in the ./Collections/Welcome directory that can be opened inside this application, too!<br />
-			I will explain the features and how to use it in my <a href="https://www.youtube.com/channel/UCS3dgGR5T1cLxDfhwnBTuEA" title="visit my YouTube channel">YouTube channel</a> as this application progress.<br />
-			<br />
-			Stay tune!
-		</p>
 		
-		<div>
-			<p>
-				<h3 style="margin-bottom:0px;">Pyvarium v0.3</h3>
-				<a href="./files/Pyvarium_v0_3_20200627.zip">download</a>
-			</p>
-			<p>
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/e0kUxBeNXm0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			</p>
-			<p>
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/HDCFk6LaRmE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			</p>
-		</div>
-		
-		<div>
-			<p>
-				<h3 style="margin-bottom:0px;">Pyvarium v0.2</h3>
-				<a href="./files/Pyvarium_v0_2_20200619.zip">download</a>
-			</p>
-			<p>
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/nAXuqoLxTYo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				<br />
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/61vBuL76wUI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			</p>
-		</div>
-		<div>
-			<p>
-				<h3 style="margin-bottom:0px;">Pyvarium v0.1</h3>
-				<a href="./files/Pyvarium_v0_1_20200612.zip">download</a>
-			</p>
-			<p>
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/z8jW5xeJ9Gs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			</p>
+		<div class="row">
+			<div class="col" style="min-width:540px;">
+				<div style="padding:10px; border:3px solid #eee; border-radius:5px;">
+					<div style="text-align:center;">
+						<img src="./files/welcome_small.png" />
+					</div>
+					<p>
+						Pyvarium is a Python script runner GUI tool.<br />
+						It designed to be easy and quickly load and execute scripts just like using command line.<br />
+						It feature result that can be represented as textual or graphical using the PySide2 widgets to provide convenience and interactivity.<br />
+						It was created as a testing and analitics tool in mind, but come up as a multipurpose tool.
+					</p>
+					<p>
+						This application is distributed in source code form.<br />
+						To run it, you need at least <a href="https://www.python.org/downloads/" title="Python download page">Python3</a> 
+						and <a href="https://doc.qt.io/qtforpython/quickstart.html" title="PySide2 quickstart page">PySide2</a> environment already set up in your computer.
+					</p>
+					<p>
+						The documentations are included in the ./Collections/Welcome directory that can be opened inside this application, too!<br />
+						I will explain the features and how to use it in my <a href="https://www.youtube.com/channel/UCS3dgGR5T1cLxDfhwnBTuEA" title="visit my YouTube channel">YouTube channel</a> as this application progress.<br />
+						<br />
+						Stay tune!
+					</p>
+				</div>
+			</div>
+			<div class="col" style="padding:10px;text-align:center;">
+				<div>
+					<p>
+						<h3 style="margin-bottom:0px;">Pyvarium v0.3</h3>
+						<a href="./files/Pyvarium_v0_3_20200627.zip">download</a>
+					</p>
+					<p>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/e0kUxBeNXm0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</p>
+					<p>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/HDCFk6LaRmE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</p>
+				</div>
+				
+				<div>
+					<p>
+						<h3 style="margin-bottom:0px;">Pyvarium v0.2</h3>
+						<a href="./files/Pyvarium_v0_2_20200619.zip">download</a>
+					</p>
+					<p>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/nAXuqoLxTYo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<br />
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/61vBuL76wUI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</p>
+				</div>
+				<div>
+					<p>
+						<h3 style="margin-bottom:0px;">Pyvarium v0.1</h3>
+						<a href="./files/Pyvarium_v0_1_20200612.zip">download</a>
+					</p>
+					<p>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/z8jW5xeJ9Gs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</p>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>
