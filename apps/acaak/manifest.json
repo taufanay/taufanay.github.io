@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "Acaak",
+  "short_name": "Acaak",
+  "version": "com.annexdesk.apps.acaak",
+  "description": "Acaaak is a simple Random Picker application.\n        It that will pick up randomly one result from a given list.\n        You can edit, save and load your list.",
+  "author": "Annexdesk Team",
+  "icons": [],
+  "start_url": "index.html"
+}

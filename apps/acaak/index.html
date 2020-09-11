@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+		<!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+		<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" />
+
+		<link rel="stylesheet" href="onsenui/css/onsenui.css">
+		<link rel="stylesheet" href="onsenui/css/onsen-css-components.min.css">
+		<script src="onsenui/js/onsenui.min.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/platform.file.js"></script>
+		<script src="js/helper.js"></script>
+		<script src="js/env.js"></script>
+		<script src="js/database.js"></script>
+	</head>
+	<body>
+		<ons-navigator id="MainNav" page="initializing.html"></ons-navigator>
+		
+		<template id="initializing.html">
+			<ons-page> 
+			</ons-page>
+		</template>
+		
+		<script>
+			var mainNav = document.getElementById('MainNav')
+			
+			function main()
+			{
+				// pages init listener
+				document.addEventListener('init', function(event) {
+					var page = event.target;
+					if (page.matches('#Tab1')) start()
+					else if (page.matches('#About')) about.init()
+				});
+
+				// create BOOKMARK directory and general JSON file as database
+				platform.file.makePersistentDirectory('BOOKMARK', function(data, msg, code){
+					var defaultData = {bookmarks:[]}
+					database.init(defaultData, 'acaaak_db.json', function(){
+						mainNav.replacePage('main.html')
+					})
+				})
+			}
+			
+			function openAbout()
+			{
+				mainNav.pushPage('about.html')
+			}
+		</script>
+
+		<script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+		<script type="text/javascript" src="main.js"></script>
+		<script type="text/javascript" src="about.js"></script>
+		<script type="text/javascript">
+			app.initialize();
+		</script>
+	</body>
+</html>

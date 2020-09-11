@@ -1,0 +1,72 @@
+<html>
+<body>
+<ons-page id="Tab1">	
+	<style>
+		#Tab1 .content-main { padding-left:10px; padding-right:10px; }
+		#Tab1 .option-check { padding:0 10px; padding-top:10px; }
+		#Tab1 .option-text { width:100%; margin-right:5px; line-height:36px; }
+		#Tab1 .panel-bottom { position:fixed; background-color:white; bottom:0; width:100%; box-shadow:0 0 2px; }
+		#Tab1 .content { margin-bottom:75px; padding-bottom:10px; }
+		#Tab1 .text-muted { font-size:10px; color:gray; }
+		#Tab1 .btn-toolbar { font-size:30px; padding-left:5px; padding-right:5px;}
+		#Tab1 ons-fab { transform:none !important; bottom:90px}
+	</style>			
+	<ons-toolbar>
+		<div class="center" style="margin:0">
+			<div style="display:flex; justify-content:space-between">
+				<div style="margin-left:10px; margin-right:10px;">
+					<ons-button modifier="quiet" class="btn-toolbar" style="color:black;" onclick="openAbout()"><ons-icon icon="md-apps"></ons-icon></ons-button>
+				</div>
+				<div style="flex:1; padding-top:5px; margin-right:15px;">
+					<ons-select id="ListSelection" style="width:100%; padding-top:5px;" onchange="loadList()">
+						<optgroup label="Bookmarks">	
+						</optgroup>				
+						<optgroup label="Presets">
+							<option>New</option>
+							<option>Days</option>
+							<option>Dice</option>
+							<option>Compass</option>
+							<option>Colors</option>
+						</optgroup>
+					</ons-select>
+				</div>
+				<div style="margin-right:5px;">
+					<ons-button modifier="quiet" class="btn-toolbar" style="color:black;" onclick="deleteCurrentBookmark()"><ons-icon icon="md-delete"></ons-icon></ons-button>
+					<ons-button modifier="quiet" class="btn-toolbar" style="color:black;" onclick="saveList()"><ons-icon icon="md-bookmark"></ons-icon></ons-button>
+				</div>
+			</div>
+		</div>
+	</ons-toolbar>
+	
+	<div class="content">
+		<div id="Options" style="padding-top:20px;"></div>
+		<div style="padding-top:15px;text-align:center;" class="text-muted">Reminder: all changes must be saved to Bookmark manually</div>
+	
+		<div class="panel-bottom">
+			<div id="Result" style="margin:5px; height:25px; text-align:center;"></div>
+			<div style="margin:5px;">
+				<ons-button modifier="large" onclick="randomize()">Start Acaak!</ons-button>
+			</div>
+		</div>
+	</div>
+	
+	<ons-fab onclick="addOption()" position="bottom center">
+		<ons-icon icon="md-plus"></ons-icon>
+	</ons-fab>
+	
+	<template id="OptionTemplate">
+		<ons-row style="padding-left:10px; margin-bottom:10px;">
+			<ons-col style="flex-grow:0">
+				<ons-checkbox class="option-check" checked></ons-checkbox>
+			</ons-col>
+			<ons-col>
+				<ons-input class="option-text" placeholder="Type a new choice"></ons-input>
+			</ons-col>
+			<ons-col style="flex-grow:0">
+				<ons-button onclick="removeOption(this)" modifier="quiet" style="color:black"><ons-icon icon="md-close"></ons-icon></ons-button>
+			</ons-col>
+		</ons-row>
+	</template>
+</ons-page>
+</body>
+</html>
